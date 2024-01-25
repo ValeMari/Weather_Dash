@@ -10,7 +10,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly.express as px
 
-avg_temp = pd.read_csv('..\weather_dash\merged_temp_data.csv')
+avg_temp = pd.read_csv('merged_temp_data.csv')
 avg_temp
 
 # Working code for 1 country selection

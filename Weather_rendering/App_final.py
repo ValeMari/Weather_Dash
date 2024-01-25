@@ -10,6 +10,8 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly.express as px
 
+server = app.server
+
 avg_temp = pd.read_csv('..\data\merged_temp_data.csv')
 avg_temp
 

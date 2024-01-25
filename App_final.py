@@ -10,9 +10,7 @@ import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly.express as px
 
-server = app.server
-
-avg_temp = pd.read_csv('..\data\merged_temp_data.csv')
+avg_temp = pd.read_csv('..\weather_dash\merged_temp_data.csv')
 avg_temp
 
 # Working code for 1 country selection
@@ -58,7 +56,7 @@ fig_2 = fig_2.update_layout(plot_bgcolor="#222222", paper_bgcolor="#222222", fon
 graph2 = dcc.Graph(id='graph2', figure=fig_2, style={'backgroundColor': 'black', 'border': '3px solid #636EFA'})
 
 app = dash.Dash(external_stylesheets=[dbc.themes.CYBORG])
-
+server = app.server
 # Create dropdown options from unique cities in the DataFrame
 dropdown_options_cities = [{'label': city, 'value': city} for city in avg_temp['city'].unique()]
 
